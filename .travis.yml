@@ -10,9 +10,10 @@ deploy:
   provider: pypi
   user: euri10
 env:
-- TOXENV=py34
 - TOXENV=py27
 - TOXENV=pypy
+before_install:
+- wget https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_3.10.7.1-linux.tar.gz && tar -xf blpapi_cpp_3.10.7.1-linux.tar.gz
 install: pip install -U tox
 language: python
 python: 3.4
