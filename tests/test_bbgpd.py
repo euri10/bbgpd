@@ -68,7 +68,7 @@ def test_bdh_verysimple(blp):
                     debug=debugflag)
 
     assert isinstance(pnret, pd.Panel)
-    response = {'FP FP Equity': pd.DataFrame(index=pd.Index([datetime.date(2016, 7, 8), datetime.date(2016, 7, 11)]),
+    response = {'FP FP Equity': pd.DataFrame(index=pd.DatetimeIndex([datetime.date(2016, 7, 8), datetime.date(2016, 7, 11)]),
                                              columns=['PX_LAST'], data=[42.65, 43.35])}
 
     pn = pd.Panel.from_dict(response)

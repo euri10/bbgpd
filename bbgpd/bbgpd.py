@@ -164,13 +164,15 @@ class BLP(object):
                        start_date: datetime.date = None, end_date: datetime.date = None) -> Request:
         """
         Generic  private method to build a request
-        Enforce that tickers, fields are lists and that overrides are list of dictionnaries with
+        Enforce that tickers, fields are lists and that overrides are list of dictionaries with
         {"override key": "override value"}
         :param request_type: blpapi.request.Request, should be ReferenceDataRequest for bdp and HistoricalDataRequest
         for bdh
         :param ticker_l: list of tickers
         :param field_l: list of fields
         :param override_l: list of dictionnaries {"override key": "override value"}
+        :param start_date:
+        :param end_date:
         TODO start params
 
         :return: a blpapi.request.Request object with the passed tickers, fields and overrides
